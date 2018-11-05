@@ -44,7 +44,7 @@ public class MainFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        alarmTimePicker = getView().findViewById(R.id.alarmTimePicker);
+        /*alarmTimePicker = getView().findViewById(R.id.alarmTimePicker);*/
 
 
         //    Setup CurrentDate
@@ -90,6 +90,8 @@ public class MainFragment extends Fragment {
     }
 
     private void setController() {
+
+        alarmTimePicker = getView().findViewById(R.id.alarmTimePicker);
 
         // New Add ****************
         final int hour = alarmTimePicker.getCurrentHour();
@@ -175,7 +177,6 @@ public class MainFragment extends Fragment {
     private void setupCurrentDate() {
         // New Add ****************
         calendarView = getView().findViewById(R.id.calendarViewSet);
-
 
         Calendar calendar = Calendar.getInstance();
         dayInt[0] = calendar.get(Calendar.DAY_OF_MONTH);
